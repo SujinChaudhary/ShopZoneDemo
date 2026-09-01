@@ -5,3 +5,29 @@ node_modules/
 .env
 .env.local
 .env.*.local
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+
+# Test coverage
+coverage/
+
+# Build
+dist/
+build/
+
+# Temporary files
+tmp/
+temp/
