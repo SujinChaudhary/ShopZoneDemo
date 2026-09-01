@@ -6,13 +6,13 @@ export const registerSchema = z.object({
     .trim()
     .min(2, "Name must be at least 2 characters")
     .max(50, "Name cannot exceed 50 characters"),
-  email: z.string().trim().email("Please provide a valid email"),
+  email: z.email("Please provide a valid email").trim(),
   password: z.string().min(6, "Password must be at least 6 characters"),
   role: z.array(z.string()).optional(),
 });
 
 export const loginSchema = z.object({
-  email: z.string().trim().email("Please provide a valid email"),
+  email: z.email("Please provide a valid email").trim(),
   password: z.string().min(1, "Password is required"),
 });
 

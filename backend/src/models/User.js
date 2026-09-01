@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
-import { ROLE_CUSTOMER } from "../constants/roles.js";
+import { ROLE_ADMIN, ROLE_CUSTOMER, ROLE_VENDOR } from "../constants/roles.js";
 
 const userSchema = new mongoose.Schema(
   {
@@ -23,7 +23,7 @@ const userSchema = new mongoose.Schema(
     },
     role: {
       type: [String],
-      enum: ["ADMIN", "VENDOR", "CUSTOMER"],
+      enum: [ROLE_ADMIN,ROLE_VENDOR,ROLE_CUSTOMER],
       default: [ROLE_CUSTOMER],
     },
   },
